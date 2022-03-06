@@ -1,0 +1,61 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier -w \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint .",
+    "test": "uvu -r global-jsdom/register -r tsm test",
+    "prepare": "cd .. && husky install 2022_03_06_test/.husky",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.0",
+    "react-router-dom": "^6.2.1",
+    "styled-components": "^5.3.3",
+    "swr": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@playwright/test": "^1.19.2",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/styled-components": "^5.1.22",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "@vitejs/plugin-react": "^1.0.7",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
+    "chromatic": "^6.5.1",
+    "eslint": "^8.10.0",
+    "eslint-plugin-react": "^7.29.3",
+    "global-jsdom": "^8.4.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
+    "prettier": "^2.5.1",
+    "tsm": "^2.2.1",
+    "typescript": "^4.5.4",
+    "uvu": "^0.5.3",
+    "vite": "^2.8.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint",
+      "prettier --write"
+    ]
+  }
+}
